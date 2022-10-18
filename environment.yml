@@ -1,0 +1,20 @@
+name: nadia-cox7a
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy
+  - scipy
+  - dask
+  - dask-labextension
+  - dask-image
+  - numcodecs
+  - imageio
+  - ipywidgets
+  - pandas
+  - scikit-image
+  - matplotlib
+  - matplotlib-scalebar
+  - seaborn
+  - tqdm
