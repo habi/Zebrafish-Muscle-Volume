@@ -9,6 +9,7 @@ dependencies:
   - dask
   - dask-labextension
   - dask-image
+  - zarr  
   - numcodecs
   - imageio
   - ipywidgets
@@ -18,3 +19,7 @@ dependencies:
   - matplotlib-scalebar
   - seaborn
   - tqdm
+  - statsmodels
+  - scikit-learn
+  - openpyxl
+  - xlwt
