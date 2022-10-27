@@ -16,6 +16,8 @@ In total, we scanned 50 stacks and thus the total scanning time for this project
 The projection images were then subsequently reconstructed into a 3D stack of images with NRecon (Version 2.0.0.5, Bruker microCT, Kontich Belgium) using a ring artifact correction of 7.
 The whole process resulted in three dimensional datasets with an isometric voxel size of 8.0 µm.
 
+All scan [log files](https://github.com/habi/Zebrafish-Muscle-Volume/tree/main/logfiles) and the [data compiled from them](https://github.com/habi/Zebrafish-Muscle-Volume/blob/main/data/cox7a-tomography.csv) are available online.
+
 ## Muscle volume analysis
 The analysis of the muscle volume was performed in a set of Jupyter [@Kluyver2016] notebooks written in Python, all of which are available online [@Haberthur2022].
 
@@ -24,16 +26,19 @@ We then first cropped the datasets of all the fishes to a 'common' length, spann
 This cropping was performed on a gray value threshold based detection of the otoliths and tail fin on the anteroposterior and lateral views of the fishes.
 To suppress the noise inherent in the tomographic reconstructions, we applied a three-dimensional median filtered (size=5) to the cropped datasets.
 We used the peaks of the gray value histogram of each dataset (see Fig. 1) as marker labels for a random walker segmentation [@Grady2006] of the reconstructions into background, guts and muscles.
-The three-dimensional volume of the largest connected component of the segmented muscles was tabulated and plotted normalized to the cropped length of the fishes (see Fig. 2).
+The three-dimensional volume of the largest connected component of the segmented muscles was extracted by simple voxel counting and tabulated.
 
 ![Figure 1: Gray value histograms of datasets.](Output/3d484db/Histograms.Median.Experiment.png)
-
-![Figure 2: Segmented muscle volume, normalized to otolith-tail distance.](Output/3d484db/SegmentedVolume.Normalized.Length.png)
-
 
 # Results
 ## Muscle volume analysis
 
-We need to verbatim copy the results either directly from the notebook or link to the exported data file which was processed by the other authors.
+A tabulated copy of the data presented in the results section is [available online as CSV file](https://github.com/habi/Zebrafish-Muscle-Volume/blob/main/data/data.csv).
+
+We plotted the volume of the segmented muscle regions normalized to the cropped length of the fishes (see Fig. 2).
+
+![Figure 2: Segmented muscle volume, normalized to otolith-tail distance.](Output/3d484db/SegmentedVolume.Normalized.Length.png)
+
+**We need to verbatim copy the results either directly from the notebook or link to the exported data file which was processed by the other authors.**
 
 # References
