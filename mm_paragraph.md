@@ -1,5 +1,5 @@
 ---
-title: Materials & Methods David *Cox7a Project
+title: Materials & Methods David *Cox7a Project*
 author: David Haberthür
 ---
 
@@ -34,4 +34,6 @@ The three-dimensional volume of the largest connected component of the segmented
 # Results
 ## Muscle volume analysis
 
-We need to verbatim copy the results either directly from the notebook or link to the exported data file which was processed by the other authors
+We need to verbatim copy the results either directly from the notebook or link to the exported data file which was processed by the other authors.
+
+# References
