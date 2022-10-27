@@ -17,10 +17,10 @@ The projection images were then subsequently reconstructed into a 3D stack of im
 The whole process resulted in three dimensional datasets with an isometric voxel size of 8.0 µm.
 
 ## Muscle volume analysis
-The analyis of the muscle volume was performed in a set of Jupyter [@Kluyver2016] notebooks written in Python, all of which are available online [@Haberthur2022].
+The analysis of the muscle volume was performed in a set of Jupyter [@Kluyver2016] notebooks written in Python, all of which are available online [@Haberthur2022].
 
 At first we generated preview images in anteroposterior, lateral and dorsoventral directions of the fishes for previewing the scans.
-We then first cropped the datasets of all the fishes to a 'common' length, spanning from the center of the otoliths to the start of the tailfin.
+We then first cropped the datasets of all the fishes to a 'common' length, spanning from the center of the otoliths to the start of the tail fin.
 This cropping was performed on a gray value threshold based detection of the otoliths and tail fin on the anteroposterior and lateral views of the fishes.
 To suppress the noise inherent in the tomographic reconstructions, we applied a three-dimensional median filtered (size=5) to the cropped datasets.
 We used the peaks of the gray value histogram of each dataset (see Fig. 1) as marker labels for a random walker segmentation [@Grady2006] of the reconstructions into background, guts and muscles.
