@@ -18,8 +18,11 @@ echo "1272 -> FastSSD anaklin25"
 rsync --human-readable --verbose --recursive --update --omit-dir-times --include="*/" --include="*.?og" --include="*.c?v" --include="*_spr*.bmp" --include="*.txt" --include="*.md" --exclude="*" ~/research-storage-uct/Archiv_Tape/Zebrafish_Carolina_Muscles/ /media/habi/Fast_SSD/Zebrafish_Carolina_Muscles/
 echo "1272 -> FastSSD anaklin04"
 rsync --human-readable --verbose --recursive --update --omit-dir-times --include="*/" --exclude="*.?if" ~/research-storage-uct/Archiv_Tape/Zebrafish_Carolina_Muscles/ ~/anaklin04-f/Zebrafish_Carolina_Muscles/
-# Generate us a copy of the 'support' files which we need for the publication on the fastSSD
-echo "1272 -> FastSSD anaklin25"
-rsync --human-readable --verbose --recursive --update --omit-dir-times --include="*/" --include="*.?og" --include="*.c?v" --include="*_spr*.bmp" --include="*.txt" --include="*.md" --exclude="*" ~/research-storage-uct/Archiv_Tape/Zebrafish_Carolina_Muscles/ /media/habi/Fast_SSD/Zebrafish_Carolina_Muscles/
+# Sync the two fastSSDs
+echo "FastSSD anaklin04 -> FastSSD anaklin25"
+rsync --human-readable --verbose --recursive --update --omit-dir-times ~/anaklin04-f/Zebrafish_Carolina_Muscles/ /media/habi/Fast_SSD/Zebrafish_Carolina_Muscles/
+echo "FastSSD anaklin25 -> FastSSD anaklin04"
+rsync --human-readable --verbose --recursive --update --omit-dir-times /media/habi/Fast_SSD/Zebrafish_Carolina_Muscles/ ~/anaklin04-f/Zebrafish_Carolina_Muscles/
+# Generate us a copy of the 'support' files which we need for the publication
 echo "iee -> Github repository logfiles"
 rsync --human-readable --verbose --recursive --update --omit-dir-times --include="*/" --include="*.log" --include="*.csv" --include="*.txt" --include="*.md" --exclude="*" ~/research-storage-uct/Archiv_Tape/Zebrafish_Carolina_Muscles/ ~/P/Documents/Zebrafish-Carolina/logfiles/
